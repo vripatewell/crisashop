@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="style.css" />
+  <title>Payment CRISA SHOP</title>
+  <link rel="icon" type="image/png" href="https://img1.pixhost.to/images/5937/602671012_media.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="page" id="about">
+    <h1>Hey, I'm CRISA</h1>
+    <div class="typing-text" id="typing"></div>
+    <p class="subtitle">Selamat datang di website simpel paymentku , aku harap tidak salah tf ya ^-^</p>
+    <a href="#" class="btn" onclick="showPayment()">Go to Payment</a>
+  </div>
+
+  <div class="page hidden" id="payment">
+    <h1>Payment Methods</h1>
+    <p class="subtitle">Silahkan pilih salah satu metode pembayaran di bawah ini</p>
+
+    <div class="qr-frame" onclick="zoomQR()">
+      <img id="qrisImage" src="https://img1.pixhost.to/images/5937/602671012_media.jpg" alt="QR Code for Payment" />
+    </div>
+
+    <p class="subtitle">klik lalu Scan kode QR di atas dengan aplikasi pembayaran Anda</p>
+
+    <div class="payment-info">
+      <details>
+        <summary>E-WALLET</summary>
+        <p>
+          <strong>DANA</strong>: 
+          <span id="danaNumber">083863508072</span>
+          <button class="copy-btn" onclick="copyToClipboard('danaNumber')">Copy</button><br />
+          <small>A/N: IXX / A*I</small>
+        </p>
+        <p>
+          <strong>OVO</strong>: 
+          <span id="ovoNumber">083863508072</span>
+          <button class="copy-btn" onclick="copyToClipboard('ovoNumber')">Copy</button><br />
+          <small>A/N: H***S***</small>
+        </p>
+        <p>
+          <strong>GOPAY</strong>: 
+              <span id="gopayNumber">_</span>
+          <button class="copy-btn" onclick="copyToClipboard('gopayNumber')">Copy</button><br />
+          <small>A/N: _/small>
+        </p>
+      </details>
+
+      <details>
+        <summary>TRANSFER BANK</summary>
+        <p>
+          <strong>BRI</strong>: 
+          <span id="danaNumber">BLOM TERSEDIA</span><br />
+          <small>A/N: -</small>
+        </p>
+      </details>
+    </div>
+
+    <div class="social">
+      <a href="https://wa.me/6283857674588" target="_blank" class="btn">WhatsApp</a>
+      <a href="https://t.me/crisa220811" target="_blank" class="btn">Telegram</a>
+    </div>
+
+    <a href="#" class="btn" onclick="showAbout()">Back</a>
+  </div>
+
+  <div class="overlay" id="qrOverlay" onclick="closeZoom()">
+    <img id="zoomedQR" src="" alt="QR Code for Payment" />
+  </div>
+
+  <audio id="paymentMusic"></audio>
+
+  <script src="main.js"></script>
+</body>
+</html>
