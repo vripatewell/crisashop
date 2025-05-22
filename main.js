@@ -69,7 +69,7 @@ const audioFiles = [
 
     const teksList = [
       "Halo, selamat datang!",
-      "website payment Riki",
+      "website payment Crisa",
       "klik go to payment untuk",
       "memilih payment yang tersedia"
     ];
